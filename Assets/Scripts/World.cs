@@ -12,6 +12,7 @@ public class World : MonoBehaviour
     Dictionary<Colors, Transform> colorTransforms;
     Transform texturesTransform;
     public RectTransform colorPalette;
+    public string Name;
     
     private void Awake()
     {
