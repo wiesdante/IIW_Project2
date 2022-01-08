@@ -261,7 +261,7 @@ MonoBehaviour:
   paintable: {fileID: 0}
   includeScale: 1
   useMesh: 0
-  activation: 1
+  activation: 2
   baseScale: {x: 0, y: 0, z: 0}
   otherRenderers: []
   onActivating:
