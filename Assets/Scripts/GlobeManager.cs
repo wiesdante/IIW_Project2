@@ -19,6 +19,7 @@ public class GlobeManager : Singleton<GlobeManager>
         if (_rotateGlobe)
         {
             _activeGlobe.transform.Rotate(Vector3.forward * (rotateSpeed * Time.deltaTime * (_rotateRight ? -1 : 1)));
+            _activeGlobe.transform.GetChild(1).Rotate(Vector3.up * (rotateSpeed * Time.deltaTime * (_rotateRight ? 1 : -1)), Space.World);
         }
     }
 

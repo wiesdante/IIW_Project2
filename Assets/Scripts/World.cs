@@ -70,7 +70,7 @@ public class World : MonoBehaviour
     }
 
 }
-enum Colors
+public enum Colors
 {
     RED = 0, GREEN = 1 , BLUE = 2, PURPLE = 3 , GRAY = 4, ALPHA = 5
 }
