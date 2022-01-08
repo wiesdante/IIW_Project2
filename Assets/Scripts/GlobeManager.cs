@@ -10,6 +10,7 @@ public class GlobeManager : Singleton<GlobeManager>
 
     public void SetActiveGlobe(GameObject globe)
     {
+        Debug.Log(globe);
         _activeGlobe = globe;
     }
 
