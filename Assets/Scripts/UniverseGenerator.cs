@@ -10,7 +10,7 @@ public class UniverseGenerator : MonoBehaviour
     [SerializeField] RectTransform colorPalette;
     int worldNumber = 5;
     public  Dictionary<int , World> worldList;
-    int incrementSun = 20;
+    int incrementSun = 60;
     int currentPos;
     public static UniverseGenerator Instance;
     private void Awake()

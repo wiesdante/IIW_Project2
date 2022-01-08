@@ -26,10 +26,10 @@ public class World : MonoBehaviour
     
     public void setTextures()
     {
-        colorTextures.Add(Colors.BLUE, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Blue_" + index + "_A.png", typeof(Texture2D)));
-        colorTextures.Add(Colors.RED, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Red_" + index + "_A.png", typeof(Texture2D)));
-        colorTextures.Add(Colors.GREEN, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Green_" + index + "_A.png", typeof(Texture2D)));
-        colorTextures.Add(Colors.PURPLE, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Purple_" + index + "_A.png", typeof(Texture2D)));
+        colorTextures.Add(Colors.BLUE, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Blue_" + index + ".png", typeof(Texture2D)));
+        colorTextures.Add(Colors.RED, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Red_" + index + ".png", typeof(Texture2D)));
+        colorTextures.Add(Colors.GREEN, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Green_" + index + ".png", typeof(Texture2D)));
+        colorTextures.Add(Colors.PURPLE, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Purple" + index + ".png", typeof(Texture2D)));
         colorTextures.Add(Colors.GRAY, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Gray_" + index + ".png", typeof(Texture2D)));
         P3dPaintableTexture p3dTexture = GetComponent<P3dPaintableTexture>();
         p3dTexture.Texture = colorTextures[Colors.GRAY];
@@ -45,6 +45,7 @@ public class World : MonoBehaviour
             P3dBlendMode blend = decal.BlendMode;
             blend.Texture = colorTextures[(Colors)i];
             decal.BlendMode = blend;
+            decal.Radius += 0.1f;
         }
         SaveToUniverse();
     }

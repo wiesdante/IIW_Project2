@@ -5,7 +5,7 @@ using UnityEditor;
 using PaintIn3D;
 public class GalaxyGenerator : MonoBehaviour
 {
-    int incrementWorld = 10;
+    int incrementWorld = 30;
     int currentX = 0;
     public int CreateGalaxy(GameObject worldPrefab, RectTransform colorPalette,int galaxyIndex, int startPos)
     {

@@ -130,13 +130,13 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   opacity: 1
   angle: 0
-  scale: {x: 2, y: 2, z: 2}
-  radius: 0.1
-  hardness: 5
+  scale: {x: 1, y: 1, z: 1}
+  radius: 1.8
+  hardness: 500
   tileTexture: {fileID: 0}
   tileTransform: {fileID: 0}
-  tileOpacity: 1
-  tileTransition: 4
+  tileOpacity: 0
+  tileTransition: 1
   modifiers:
     modifierDatas: []
 --- !u!1 &1960764551523874932
@@ -172,7 +172,7 @@ Transform:
   m_GameObject: {fileID: 1960764551523874932}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0.7071068, w: 0}
   m_LocalPosition: {x: -107.703964, y: -275.0182, z: 28.886549}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children:
   - {fileID: 1960764551298552594}
   m_Father: {fileID: 0}
@@ -446,13 +446,13 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   opacity: 1
   angle: 0
-  scale: {x: 2, y: 2, z: 2}
-  radius: 0.1
-  hardness: 5
+  scale: {x: 1, y: 1, z: 1}
+  radius: 1.8
+  hardness: 500
   tileTexture: {fileID: 0}
   tileTransform: {fileID: 0}
-  tileOpacity: 1
-  tileTransition: 4
+  tileOpacity: 0
+  tileTransition: 1
   modifiers:
     modifierDatas: []
 --- !u!1 &1960764552238338858
@@ -551,13 +551,13 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   opacity: 1
   angle: 0
-  scale: {x: 2, y: 2, z: 2}
-  radius: 0.1
-  hardness: 5
+  scale: {x: 1, y: 1, z: 1}
+  radius: 1.8
+  hardness: 500
   tileTexture: {fileID: 0}
   tileTransform: {fileID: 0}
-  tileOpacity: 1
-  tileTransition: 4
+  tileOpacity: 0
+  tileTransition: 1
   modifiers:
     modifierDatas: []
 --- !u!1 &1960764553004188356
@@ -656,12 +656,12 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   opacity: 1
   angle: 0
-  scale: {x: 2, y: 2, z: 2}
-  radius: 0.1
-  hardness: 5
+  scale: {x: 1, y: 1, z: 1}
+  radius: 1.8
+  hardness: 500
   tileTexture: {fileID: 0}
   tileTransform: {fileID: 0}
-  tileOpacity: 1
-  tileTransition: 4
+  tileOpacity: 0
+  tileTransition: 1
   modifiers:
     modifierDatas: []
