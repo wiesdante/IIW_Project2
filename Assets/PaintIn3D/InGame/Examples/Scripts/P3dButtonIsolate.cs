@@ -33,7 +33,7 @@ namespace PaintIn3D
 
 				foreach (Transform child in parent)
 				{
-					child.gameObject.SetActive(child == target && child.gameObject.activeSelf == false);
+					child.gameObject.SetActive(child == target);
 				}
 			}
 		}

@@ -312,7 +312,7 @@ MonoBehaviour:
   width: 512
   height: 512
   texture: {fileID: 0}
-  color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
+  color: {r: 1, g: 1, b: 1, a: 1}
   format: 0
   mipMaps: 0
   filter: -1
