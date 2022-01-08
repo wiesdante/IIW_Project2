@@ -40,11 +40,42 @@ public class GalaxyGenerator : MonoBehaviour
     {
         List<Vector3> worldPositions = new List<Vector3>();
         int regionIndex = 0;
+        int minDistance = 50;
         for(int i = 0; i<5;i++)
         {
             Vector3 worldPos = new Vector3();
-            int worldX = Random.Range(20, 80);
-            int worldZ = Random.Range(20, 80);
+            int worldX = 0, worldZ = 0;
+            worldX = Random.Range(20, 100);
+            worldZ = Random.Range(20, 100);
+            Vector3 temp = new Vector3(worldX, 0, worldZ);
+            bool isPerfect = false;
+            while (!isPerfect)
+            {
+                worldX = Random.Range(20, 80);
+                worldZ = Random.Range(20, 80);
+                temp = new Vector3(worldX, 0, worldZ);
+                if(worldPositions.Count > 0)
+                {
+                    foreach (Vector3 otherWorld in worldPositions)
+                    {
+                        if (Mathf.Abs(temp.magnitude - otherWorld.magnitude) > minDistance)
+                        {
+                            isPerfect = true;
+                            break;
+                        }
+                        else
+                        {
+                            isPerfect = false;
+                        }
+                    }
+                }
+                else
+                {
+                    break;
+                }
+                
+            }
+            
             switch (regionIndex)
             {
                 case 0:

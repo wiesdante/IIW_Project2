@@ -14911,6 +14911,7 @@ MonoBehaviour:
   index: 0
   colorPalette: {fileID: 0}
   Name: 
+  spray: {fileID: 6817899176965214904}
 --- !u!1 &1960764552038855476
 GameObject:
   m_ObjectHideFlags: 0

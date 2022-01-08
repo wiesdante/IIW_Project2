@@ -13,7 +13,9 @@ public class World : MonoBehaviour
     Transform texturesTransform;
     public RectTransform colorPalette;
     public string Name;
-    
+    Colors activeColor;
+    [SerializeField] SprayFX spray;
+
     private void Awake()
     {
         colorTextures = new Dictionary<Colors, Texture2D>();
@@ -24,13 +26,12 @@ public class World : MonoBehaviour
             colorTransforms.Add((Colors)i, texturesTransform.transform.GetChild(i));
         }
     }
-    
     public void setTextures()
     {
         colorTextures.Add(Colors.BLUE, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Blue_" + index + ".png", typeof(Texture2D)));
         colorTextures.Add(Colors.RED, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Red_" + index + ".png", typeof(Texture2D)));
         colorTextures.Add(Colors.GREEN, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Green_" + index + ".png", typeof(Texture2D)));
-        colorTextures.Add(Colors.PURPLE, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Purple" + index + ".png", typeof(Texture2D)));
+        colorTextures.Add(Colors.PURPLE, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Purple_" + index + ".png", typeof(Texture2D)));
         colorTextures.Add(Colors.GRAY, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Gray_" + index + ".png", typeof(Texture2D)));
         P3dPaintableTexture p3dTexture = GetComponent<P3dPaintableTexture>();
         p3dTexture.Texture = colorTextures[Colors.GRAY];
@@ -68,7 +69,35 @@ public class World : MonoBehaviour
     {
         UniverseGenerator.Instance.SaveWorld(index, this);
     }
+    private void Update()
+    {
+       
+    }
 
+    private Colors FindActiveColor()
+    {
+        foreach(Transform transform in texturesTransform)
+        {
+            if(transform.gameObject.activeSelf)
+            {
+                switch(transform.name)
+                {
+                    case "Red":
+                        return Colors.RED;
+                    case "Blue":
+                        return Colors.BLUE;
+                    case "Purple":
+                        return Colors.PURPLE;
+                    case "Green":
+                        return Colors.GREEN;
+                    default:
+                        return Colors.GRAY;
+                }
+            }
+        }
+        return Colors.ALPHA;
+
+    }
 }
 public enum Colors
 {

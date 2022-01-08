@@ -11,16 +11,22 @@ public class SprayFX : MonoBehaviour
         switch (color)
         {
             case Colors.BLUE:
-                blue.Play();
+                if (!blue.isPlaying)
+                {
+                    blue.Play();
+                }
                 break;
             case Colors.GREEN:
+                if(!green.isPlaying)
                 green.Play();
                 break;
             case Colors.PURPLE:
+                if(!purple.isPlaying)
                 purple.Play();
                 break;
             case Colors.RED:
-                red.Play();
+                if (!red.isPlaying)
+                    red.Play();
                 break;
         }
     }
