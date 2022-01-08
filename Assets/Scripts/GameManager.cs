@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     public void IncreaseWorldIndex()
     {
         UniverseGenerator.Instance.worldList[activeWorldIndex].DeactivateTextures();
+        UniverseGenerator.Instance.worldList[activeWorldIndex].gameObject.layer = 3; // Unpaintable layer
         if (activeWorldIndex == UniverseGenerator.Instance.worldList.Count - 1)
         {
             //TODO : SHOW ALL GALAXIES 
@@ -62,6 +63,7 @@ public class GameManager : MonoBehaviour
     public void DecreaseWorldIndex()
     {
         UniverseGenerator.Instance.worldList[activeWorldIndex].DeactivateTextures();
+        UniverseGenerator.Instance.worldList[activeWorldIndex].gameObject.layer = 3; // Unpaintable layer
         if (activeWorldIndex == 0)
         {
             //TODO : DELETE METHOD ?
@@ -97,7 +99,8 @@ public class GameManager : MonoBehaviour
         worldCam.LookAt = UniverseGenerator.Instance.worldList[activeWorldIndex].transform;
         worldCam.Follow = UniverseGenerator.Instance.worldList[activeWorldIndex].transform;
         UniverseGenerator.Instance.worldList[activeWorldIndex].ChangeColorTransforms();
-       
+        UniverseGenerator.Instance.worldList[activeWorldIndex].gameObject.layer = 0; // Default layer
+
     }
     public void ChangeToUniverseCam()
     {
@@ -107,6 +110,15 @@ public class GameManager : MonoBehaviour
         canvas.gameObject.SetActive(false);
         galaxyCam.Follow = UniverseGenerator.Instance.GetGalaxy(activeGalaxyIndex).sun;
         galaxyCam.LookAt = UniverseGenerator.Instance.GetGalaxy(activeGalaxyIndex).sun;
+    }
+
+    public void StartSpray()
+    {
+        UniverseGenerator.Instance.GetWorld(activeWorldIndex).StartSpray();
+    }
+    public void StopSpray()
+    {
+        UniverseGenerator.Instance.GetWorld(activeWorldIndex).StopSpray();
     }
 
 }

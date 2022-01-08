@@ -69,9 +69,15 @@ public class World : MonoBehaviour
     {
         UniverseGenerator.Instance.SaveWorld(index, this);
     }
-    private void Update()
+
+    public void StartSpray()
     {
-       
+        spray.StartSpray(FindActiveColor());
+    }
+
+    public void StopSpray()
+    {
+        spray.StopSpray(FindActiveColor());
     }
 
     private Colors FindActiveColor()

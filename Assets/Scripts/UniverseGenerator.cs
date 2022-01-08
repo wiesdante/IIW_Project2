@@ -11,7 +11,7 @@ public class UniverseGenerator : MonoBehaviour
     int worldNumber = 5;
     public  Dictionary<int , World> worldList;
     public  Dictionary<int , GalaxyGenerator> galaxyList;
-    int incrementSun = 60;
+    int incrementSun = 150;
     int currentPos;
     public static UniverseGenerator Instance;
     private void Awake()
