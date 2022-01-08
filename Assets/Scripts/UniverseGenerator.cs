@@ -26,7 +26,6 @@ public class UniverseGenerator : MonoBehaviour
         currentPos = 0;
         worldList = new Dictionary<int, World>();
         CreateUniverse();
-        GameManager.Instance.ChangeCam();
     }
     public void CreateUniverse()
     {
@@ -38,6 +37,7 @@ public class UniverseGenerator : MonoBehaviour
             currentPos = galaxyGen.CreateGalaxy(worldPrefab, colorPalette, i, currentPos);
             currentPos += incrementSun;
         }
+        GameManager.Instance.ChangeCam();
     }
     public  void SaveWorld(int index ,World world)
     {

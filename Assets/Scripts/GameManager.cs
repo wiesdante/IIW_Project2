@@ -24,7 +24,8 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseWorldIndex()
     {
-        if(activeWorldIndex == UniverseGenerator.Instance.worldList.Count - 1)
+        UniverseGenerator.Instance.worldList[activeWorldIndex].DeactivateTextures();
+        if (activeWorldIndex == UniverseGenerator.Instance.worldList.Count - 1)
         {
             activeWorldIndex = 0;
         }
@@ -37,7 +38,8 @@ public class GameManager : MonoBehaviour
 
     public void DecreaseWorldIndex()
     {
-        if(activeWorldIndex == 0)
+        UniverseGenerator.Instance.worldList[activeWorldIndex].DeactivateTextures();
+        if (activeWorldIndex == 0)
         {
             activeWorldIndex = UniverseGenerator.Instance.worldList.Count - 1;
         }

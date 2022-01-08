@@ -24,6 +24,7 @@ public class GalaxyGenerator : MonoBehaviour
             worldGo.name = "World_" + world.index;
             worldGo.transform.position = new Vector3(currentX ,0 ,0);
             world.setTextures();
+            world.DeactivateTextures();
         }
         return currentX;
     }

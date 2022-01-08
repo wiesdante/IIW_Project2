@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1960764551412676172}
   - component: {fileID: 1960764551412676174}
-  - component: {fileID: 1960764551412676175}
+  - component: {fileID: 539199001720228237}
   m_Layer: 0
   m_Name: Blue
   m_TagString: Untagged
@@ -102,7 +102,7 @@ MonoBehaviour:
     hitSpacing: 0
     hitLimit: 30
     connectHits: 0
---- !u!114 &1960764551412676175
+--- !u!114 &539199001720228237
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,35 +111,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1960764551412676173}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b36498e7e45483f478ff74ab3f1cb21c, type: 3}
+  m_Script: {fileID: 11500000, guid: 724ff6f732015ec4e8fecdb3d889fb82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   layers:
     serializedVersion: 2
     m_Bits: 4294967295
-  targetModel: {fileID: 0}
   group:
     index: 0
+  targetModel: {fileID: 0}
   targetTexture: {fileID: 0}
   blendMode:
     Index: 9
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Texture: {fileID: 2800000, guid: d64637df491bf83418b42d95e7a7b5b7, type: 3}
+    Texture: {fileID: 0}
     Kernel: 1
     Channels: {x: 1, y: 1, z: 1, w: 1}
-  texture: {fileID: 2800000, guid: d64637df491bf83418b42d95e7a7b5b7, type: 3}
-  shape: {fileID: 0}
-  shapeChannel: 3
   color: {r: 1, g: 1, b: 1, a: 1}
   opacity: 1
-  angle: 50
+  angle: 0
   scale: {x: 2, y: 2, z: 2}
-  radius: 0.4
+  radius: 0.1
   hardness: 5
-  wrapping: 1
-  normalFront: 1
-  normalBack: 0
-  normalFade: 0.01
   tileTexture: {fileID: 0}
   tileTransform: {fileID: 0}
   tileOpacity: 1
@@ -367,7 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1960764552038855479}
   - component: {fileID: 1960764552038855473}
-  - component: {fileID: 1960764552038855478}
+  - component: {fileID: 6454339911237666276}
   m_Layer: 0
   m_Name: Purple
   m_TagString: Untagged
@@ -425,7 +418,7 @@ MonoBehaviour:
     hitSpacing: 0
     hitLimit: 30
     connectHits: 0
---- !u!114 &1960764552038855478
+--- !u!114 &6454339911237666276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -434,35 +427,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1960764552038855476}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b36498e7e45483f478ff74ab3f1cb21c, type: 3}
+  m_Script: {fileID: 11500000, guid: 724ff6f732015ec4e8fecdb3d889fb82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   layers:
     serializedVersion: 2
     m_Bits: 4294967295
-  targetModel: {fileID: 0}
   group:
     index: 0
+  targetModel: {fileID: 0}
   targetTexture: {fileID: 0}
   blendMode:
     Index: 9
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Texture: {fileID: 2800000, guid: b2f4e2e8d3aef5e40a6183773e987995, type: 3}
+    Texture: {fileID: 0}
     Kernel: 1
     Channels: {x: 1, y: 1, z: 1, w: 1}
-  texture: {fileID: 2800000, guid: b2f4e2e8d3aef5e40a6183773e987995, type: 3}
-  shape: {fileID: 0}
-  shapeChannel: 3
   color: {r: 1, g: 1, b: 1, a: 1}
   opacity: 1
-  angle: 50
+  angle: 0
   scale: {x: 2, y: 2, z: 2}
-  radius: 0.4
+  radius: 0.1
   hardness: 5
-  wrapping: 1
-  normalFront: 1
-  normalBack: 0
-  normalFade: 0.01
   tileTexture: {fileID: 0}
   tileTransform: {fileID: 0}
   tileOpacity: 1
@@ -479,7 +465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1960764552238338853}
   - component: {fileID: 1960764552238338855}
-  - component: {fileID: 1960764552238338852}
+  - component: {fileID: 8321098555883782673}
   m_Layer: 0
   m_Name: Red
   m_TagString: Untagged
@@ -537,7 +523,7 @@ MonoBehaviour:
     hitSpacing: 0
     hitLimit: 30
     connectHits: 0
---- !u!114 &1960764552238338852
+--- !u!114 &8321098555883782673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -546,35 +532,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1960764552238338858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b36498e7e45483f478ff74ab3f1cb21c, type: 3}
+  m_Script: {fileID: 11500000, guid: 724ff6f732015ec4e8fecdb3d889fb82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   layers:
     serializedVersion: 2
     m_Bits: 4294967295
-  targetModel: {fileID: 0}
   group:
     index: 0
+  targetModel: {fileID: 0}
   targetTexture: {fileID: 0}
   blendMode:
     Index: 9
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Texture: {fileID: 2800000, guid: ec926727499c91548ac3fcb6c8776335, type: 3}
+    Texture: {fileID: 0}
     Kernel: 1
     Channels: {x: 1, y: 1, z: 1, w: 1}
-  texture: {fileID: 2800000, guid: ec926727499c91548ac3fcb6c8776335, type: 3}
-  shape: {fileID: 0}
-  shapeChannel: 3
   color: {r: 1, g: 1, b: 1, a: 1}
   opacity: 1
-  angle: 50
+  angle: 0
   scale: {x: 2, y: 2, z: 2}
-  radius: 0.4
+  radius: 0.1
   hardness: 5
-  wrapping: 1
-  normalFront: 1
-  normalBack: 0
-  normalFade: 0.01
   tileTexture: {fileID: 0}
   tileTransform: {fileID: 0}
   tileOpacity: 1
@@ -591,7 +570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1960764553004188359}
   - component: {fileID: 1960764553004188353}
-  - component: {fileID: 1960764553004188358}
+  - component: {fileID: 9211904551264178924}
   m_Layer: 0
   m_Name: Green
   m_TagString: Untagged
@@ -649,7 +628,7 @@ MonoBehaviour:
     hitSpacing: 0
     hitLimit: 30
     connectHits: 0
---- !u!114 &1960764553004188358
+--- !u!114 &9211904551264178924
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -658,35 +637,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1960764553004188356}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b36498e7e45483f478ff74ab3f1cb21c, type: 3}
+  m_Script: {fileID: 11500000, guid: 724ff6f732015ec4e8fecdb3d889fb82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   layers:
     serializedVersion: 2
     m_Bits: 4294967295
-  targetModel: {fileID: 0}
   group:
     index: 0
+  targetModel: {fileID: 0}
   targetTexture: {fileID: 0}
   blendMode:
     Index: 9
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Texture: {fileID: 2800000, guid: f3b3f62fc65df7548a7bc4bda1e6a2f1, type: 3}
+    Texture: {fileID: 0}
     Kernel: 1
     Channels: {x: 1, y: 1, z: 1, w: 1}
-  texture: {fileID: 2800000, guid: f3b3f62fc65df7548a7bc4bda1e6a2f1, type: 3}
-  shape: {fileID: 0}
-  shapeChannel: 3
   color: {r: 1, g: 1, b: 1, a: 1}
   opacity: 1
-  angle: 50
+  angle: 0
   scale: {x: 2, y: 2, z: 2}
-  radius: 0.4
+  radius: 0.1
   hardness: 5
-  wrapping: 1
-  normalFront: 1
-  normalBack: 0
-  normalFade: 0.01
   tileTexture: {fileID: 0}
   tileTransform: {fileID: 0}
   tileOpacity: 1

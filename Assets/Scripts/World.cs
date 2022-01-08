@@ -41,10 +41,9 @@ public class World : MonoBehaviour
     {
         for(int i = 0; i<4;i++)
         {
-            P3dPaintDecal decal = texturesTransform.transform.GetChild(i).GetComponent<P3dPaintDecal>();
+            P3dPaintSphere decal = texturesTransform.transform.GetChild(i).GetComponent<P3dPaintSphere>();
             P3dBlendMode blend = decal.BlendMode;
             blend.Texture = colorTextures[(Colors)i];
-            decal.Texture = colorTextures[(Colors)i];
             decal.BlendMode = blend;
         }
         SaveToUniverse();
@@ -52,13 +51,17 @@ public class World : MonoBehaviour
 
     public void ChangeColorTransforms()
     {
-        for(int i =0; i<4;i++)
+        texturesTransform.gameObject.SetActive(true);
+        for (int i =0; i<4;i++)
         {
             colorPalette.transform.GetChild(i).GetComponent<P3dButtonIsolate>().Target = colorTransforms[(Colors)i];
         }
         GlobeManager.Instance.SetActiveGlobe(gameObject);
     }
-
+    public void DeactivateTextures()
+    {
+        texturesTransform.gameObject.SetActive(false);
+    }
     public void SaveToUniverse()
     {
         UniverseGenerator.Instance.SaveWorld(index, this);
