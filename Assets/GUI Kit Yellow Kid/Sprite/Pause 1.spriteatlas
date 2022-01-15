@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Pause 1
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: b79cc2eb8af1e42c9ad37d778c6f07cf, type: 3}
+    totalSpriteSurfaceArea: 205767
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 5bed3d80f17264bc1a992716c93e28f4, type: 3}
+  - {fileID: 21300000, guid: c6c061720cf2042129b580f09c497b8e, type: 3}
+  - {fileID: 21300000, guid: 87fcc18b70ebd4e1f9e583e8dc29e715, type: 3}
+  - {fileID: 21300000, guid: 495683ddac45947a7befbccaa09a1561, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - pause_title
+  - pause_btn_restart
+  - pause_btn_resume
+  - pause_btn_exit
+  m_Tag: Pause 1
+  m_IsVariant: 0

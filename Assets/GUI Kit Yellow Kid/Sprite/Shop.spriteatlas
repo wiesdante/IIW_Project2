@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shop
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 43f3b4ccb04c14be39fb2ee7716b4cd8, type: 3}
+    totalSpriteSurfaceArea: 543488
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: ee07b4c01cd124709a8c91c1bd2ba3d9, type: 3}
+  - {fileID: 21300000, guid: 978b28f063fb146e7a48c074046819ba, type: 3}
+  - {fileID: 21300000, guid: 193e8df04391448d4a7d4682eb2d2582, type: 3}
+  - {fileID: 21300000, guid: 27b95551798a24be39a0c38cc79125f9, type: 3}
+  - {fileID: 21300000, guid: 527d3e81145174d429ef196bbe035a2d, type: 3}
+  - {fileID: 21300000, guid: cdeda09195f1d441f9f9a9d5e1ed09c1, type: 3}
+  - {fileID: 21300000, guid: 310449913cffd492faac082b81cc5dcc, type: 3}
+  - {fileID: 21300000, guid: c0b39533303734b13ab5767a054b6cdd, type: 3}
+  - {fileID: 21300000, guid: f912ffc4c694044a2911170f3bad6586, type: 3}
+  - {fileID: 21300000, guid: 97ef44f4138da4d679fd7ade55ae44e8, type: 3}
+  - {fileID: 21300000, guid: fe1e8627bf8464953a7a9bddbbda6685, type: 3}
+  - {fileID: 21300000, guid: 41316d883410f4fc99124f8b95190c23, type: 3}
+  - {fileID: 21300000, guid: 2071b498503f34958be6355c345fb591, type: 3}
+  - {fileID: 21300000, guid: 7be130198ca5a40f69c4691e00d90ebc, type: 3}
+  - {fileID: 21300000, guid: 6ab408da28dfd4e1a81c0934bd3378aa, type: 3}
+  - {fileID: 21300000, guid: d8718afafbed749b39da05eed98f7d8d, type: 3}
+  - {fileID: 21300000, guid: 1b60d29b7c4a949929db8bb4729c6d20, type: 3}
+  - {fileID: 21300000, guid: e4d959abef2e643f1b2e04321f149b64, type: 3}
+  - {fileID: 21300000, guid: c825a87ce84064b1aa11a8890d42450b, type: 3}
+  - {fileID: 21300000, guid: 5663222fc954246f9ad7d1490cea6eae, type: 3}
+  - {fileID: 21300000, guid: 1c88eaefe484b42b68943b85036fe669, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - shop_img_coin_01
+  - itemshop_frame_lock
+  - item_locked
+  - item_coin
+  - shop_img_gem_01
+  - item_locked_label
+  - shop_img_coin_04
+  - shop_img_gem_03
+  - itemshop_frame_n
+  - item_title_icon
+  - shop_img_coin_03
+  - shop_label_best
+  - item_life_count_bg
+  - shop_life
+  - status_gage_common
+  - shop_title_icon
+  - shop_img_gem_02
+  - shop_label_bonus
+  - shop_img_coin_02
+  - status_icon_coin
+  - shop_img_gem_04
+  m_Tag: Shop
+  m_IsVariant: 0
