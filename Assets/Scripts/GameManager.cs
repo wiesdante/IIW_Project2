@@ -12,7 +12,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     [SerializeField] TMP_InputField nameInput;
     [SerializeField] RectTransform canvas, endScreen;
+    [SerializeField] RectTransform palette;
     Phase gamePhase;
+    [SerializeField] List<ColorSprite> sprites;
 
     // Start is called before the first frame update
     private void Awake()
@@ -85,7 +87,7 @@ public class GameManager : MonoBehaviour
             ChangeToUniverseCam();
             gamePhase = Phase.SHOW_UNIVERSE;
             SwitchCanvas();
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(3f);
             gamePhase = Phase.NEXT_UNIVERSE_INPUT;
             SwitchCanvas();
             gamePhase = Phase.END;
@@ -96,7 +98,7 @@ public class GameManager : MonoBehaviour
             activeGalaxyIndex++;
             gamePhase = Phase.SHOW_UNIVERSE;
             SwitchCanvas();
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(3f);
             gamePhase = Phase.NEXT_UNIVERSE_INPUT;
             SwitchCanvas();
         }
@@ -165,8 +167,40 @@ public class GameManager : MonoBehaviour
         canvas.gameObject.SetActive(false);
         endScreen.gameObject.SetActive(false);
     }
+
+    public void ChangePaletteSprite(string color)
+    {
+        for(int i = 0; i<palette.childCount; i++)
+        {
+            palette.transform.GetChild(i).GetComponent<Image>().sprite = sprites[i].inactive;
+        }
+
+        switch(color)
+        {
+            case "RED":
+                palette.transform.GetChild(0).GetComponent<Image>().sprite = sprites[0].active;
+                break;
+            case "BLUE":
+                palette.transform.GetChild(2).GetComponent<Image>().sprite = sprites[2].active;
+                break;
+            case "GREEN":
+                palette.transform.GetChild(1).GetComponent<Image>().sprite = sprites[1].active;
+                break;
+            case "PURPLE":
+                palette.transform.GetChild(3).GetComponent<Image>().sprite = sprites[3].active;
+                break;
+        }
+    }
 }
 public enum Phase
 {
     WORLD_PAINT, SHOW_UNIVERSE, NEXT_UNIVERSE_INPUT, END
+}
+
+
+[System.Serializable]
+public class ColorSprite 
+{
+    public Colors color;
+    public Sprite active, inactive;
 }

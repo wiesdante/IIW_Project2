@@ -13,7 +13,6 @@ public class World : MonoBehaviour
     Transform texturesTransform;
     public RectTransform colorPalette;
     public string Name;
-    Colors activeColor;
     [SerializeField] SprayFX spray;
 
     private void Awake()
@@ -80,6 +79,7 @@ public class World : MonoBehaviour
         spray.StopSpray(FindActiveColor());
     }
 
+
     private Colors FindActiveColor()
     {
         foreach(Transform transform in texturesTransform)
@@ -102,7 +102,6 @@ public class World : MonoBehaviour
             }
         }
         return Colors.ALPHA;
-
     }
 }
 public enum Colors

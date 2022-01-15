@@ -13,14 +13,14 @@ public class GalaxyGenerator : MonoBehaviour
     
     public int CreateGalaxy(GameObject worldPrefab, RectTransform colorPalette,int galaxyIndex, int startPos)
     {
-        List<Vector3> worldPositions = GenerateWorldPositions();
         this.galaxyIndex = galaxyIndex;
         int multi = galaxyIndex * 5;
         currentX = startPos;
         GameObject sunPre = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Sun_" + Random.Range(0, 3) + ".prefab", typeof(GameObject));
         GameObject sunGo = Instantiate(sunPre, transform);
-        sun = sunGo.transform;
         sunGo.transform.position = new Vector3(currentX, 0, 0);
+        sunGo.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
+        sun = sunGo.transform;
         currentX += incrementWorld;
         for (int i = 0; i < 5; i++)
         {
@@ -29,12 +29,20 @@ public class GalaxyGenerator : MonoBehaviour
             world.colorPalette = colorPalette;
             world.index = multi + i;
             worldGo.name = "World_" + world.index;
-            worldGo.transform.position = sun.transform.position +  worldPositions[i];
+            worldGo.transform.position = GetPosition(worldGo.transform, i, sunGo );
             worldGo.transform.Rotate(new Vector3(0, 0, 1), 180);
             world.setTextures();
             world.DeactivateTextures();
+
         }
         return currentX;
+    }
+
+    private Vector3 GetPosition(Transform worldGo, int i, GameObject sunGo)
+    {
+        sunGo.transform.Rotate(Vector3.up, 72);
+        worldGo.position += sunGo.transform.position + ( sunGo.transform.forward * Random.Range(30, 60));
+        return worldGo.position;
     }
 
     public List<Vector3> GenerateWorldPositions()
@@ -110,4 +118,5 @@ public class GalaxyGenerator : MonoBehaviour
         return worldPositions;
 
     }
+
 }

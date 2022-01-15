@@ -1046,7 +1046,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 978981302}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1303102539}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ChangeToWorldCam
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &978981302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1416,7 +1428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 50, y: 137.9, z: -331.9}
+  m_FollowOffset: {x: 50, y: 180, z: 0}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -1677,7 +1689,22 @@ MonoBehaviour:
   worldCam: {fileID: 10043779}
   galaxyCam: {fileID: 2097677750}
   nameInput: {fileID: 1044745028}
-  canvas: {fileID: 1968034907}
+  canvas: {fileID: 247842702}
+  endScreen: {fileID: 312729732}
+  palette: {fileID: 1602563633}
+  sprites:
+  - color: 0
+    active: {fileID: 21300000, guid: 09f397bcef799544294a76bcc980dcd3, type: 3}
+    inactive: {fileID: 21300000, guid: d3ba2ef2c39fd2945add8ee1b01f590e, type: 3}
+  - color: 1
+    active: {fileID: 21300000, guid: 806b13bc630228f4ca2442a32f1a6660, type: 3}
+    inactive: {fileID: 21300000, guid: 76bc22bc1d4f3614ab3b4512a69288fe, type: 3}
+  - color: 2
+    active: {fileID: 21300000, guid: dcb3db7f667c92f41a49294dd0c08ba1, type: 3}
+    inactive: {fileID: 21300000, guid: 4571f59d126ad5e4390dfd9e788c9871, type: 3}
+  - color: 3
+    active: {fileID: 21300000, guid: 37426a04596b9a84f814ab45272eec60, type: 3}
+    inactive: {fileID: 21300000, guid: e271cc27a2f02d74686fc91d908a7b24, type: 3}
 --- !u!4 &1303102540
 Transform:
   m_ObjectHideFlags: 0
@@ -1704,6 +1731,7 @@ GameObject:
   - component: {fileID: 1364362639}
   - component: {fileID: 1364362638}
   - component: {fileID: 1364362637}
+  - component: {fileID: 1364362640}
   m_Layer: 5
   m_Name: Purple
   m_TagString: Untagged
@@ -1781,6 +1809,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &1364362640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364362635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1303102539}
+          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+          m_MethodName: ChangePaletteSprite
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: PURPLE
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1380452974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,6 +1850,7 @@ GameObject:
   - component: {fileID: 1380452978}
   - component: {fileID: 1380452977}
   - component: {fileID: 1380452976}
+  - component: {fileID: 1380452979}
   m_Layer: 5
   m_Name: Red
   m_TagString: Untagged
@@ -1870,6 +1928,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &1380452979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380452974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1303102539}
+          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+          m_MethodName: ChangePaletteSprite
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: RED
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1380629754
 GameObject:
   m_ObjectHideFlags: 0
@@ -3571,6 +3658,7 @@ GameObject:
   - component: {fileID: 2038051736}
   - component: {fileID: 2038051735}
   - component: {fileID: 2038051734}
+  - component: {fileID: 2038051737}
   m_Layer: 5
   m_Name: Green
   m_TagString: Untagged
@@ -3648,6 +3736,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &2038051737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038051732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1303102539}
+          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+          m_MethodName: ChangePaletteSprite
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: GREEN
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2051432572
 GameObject:
   m_ObjectHideFlags: 0
@@ -3846,6 +3963,7 @@ GameObject:
   - component: {fileID: 2108688956}
   - component: {fileID: 2108688958}
   - component: {fileID: 2108688957}
+  - component: {fileID: 2108688959}
   m_Layer: 5
   m_Name: Blue
   m_TagString: Untagged
@@ -3923,6 +4041,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108688954}
   m_CullTransparentMesh: 1
+--- !u!114 &2108688959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108688954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1303102539}
+          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+          m_MethodName: ChangePaletteSprite
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: BLUE
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!23 &5356584268781812121
 MeshRenderer:
   m_ObjectHideFlags: 0
