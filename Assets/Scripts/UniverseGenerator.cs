@@ -28,6 +28,7 @@ public class UniverseGenerator : MonoBehaviour
         worldList = new Dictionary<int, World>();
         galaxyList = new Dictionary<int, GalaxyGenerator>();
         CreateUniverse();
+        GameManager.Instance.CloseCanvases();
         StartCoroutine(GameManager.Instance.ChangeCam());
     }
     public void CreateUniverse()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 public class GameManager : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera worldCam, galaxyCam;
     public static GameManager Instance;
     [SerializeField] TMP_InputField nameInput;
-    [SerializeField] Canvas canvas;
+    [SerializeField] RectTransform canvas, endScreen;
+    Phase gamePhase;
 
     // Start is called before the first frame update
     private void Awake()
@@ -23,6 +25,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+        gamePhase = Phase.WORLD_PAINT;
         activeGalaxyIndex = 0;
         activeWorldIndex = 0;
     }
@@ -50,14 +53,13 @@ public class GameManager : MonoBehaviour
         UniverseGenerator.Instance.worldList[activeWorldIndex].gameObject.layer = 3; // Unpaintable layer
         if (activeWorldIndex == UniverseGenerator.Instance.worldList.Count - 1)
         {
-            //TODO : SHOW ALL GALAXIES 
-            activeWorldIndex = 0;
+            gamePhase = Phase.END;
         }
         else
         {
             activeWorldIndex++;
         }
-        StartCoroutine( ChangeCam());
+        StartCoroutine(ChangeCam());
     }
 
     public void DecreaseWorldIndex()
@@ -78,12 +80,25 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator ChangeCam()
     {
-        if(activeWorldIndex % 5 == 0 && activeWorldIndex != 0)
+        if (gamePhase == Phase.END)
+        {
+            ChangeToUniverseCam();
+            gamePhase = Phase.SHOW_UNIVERSE;
+            SwitchCanvas();
+            yield return new WaitForSeconds(2f);
+            gamePhase = Phase.NEXT_UNIVERSE_INPUT;
+            SwitchCanvas();
+            gamePhase = Phase.END;
+        }
+        else if (activeWorldIndex % 5 == 0 && activeWorldIndex != 0)
         {
             ChangeToUniverseCam();
             activeGalaxyIndex++;
-            yield return new WaitForSeconds(4f);
-            ChangeToWorldCam();
+            gamePhase = Phase.SHOW_UNIVERSE;
+            SwitchCanvas();
+            yield return new WaitForSeconds(2f);
+            gamePhase = Phase.NEXT_UNIVERSE_INPUT;
+            SwitchCanvas();
         }
         else
         {
@@ -93,21 +108,27 @@ public class GameManager : MonoBehaviour
 
     public void ChangeToWorldCam()
     {
+        if(gamePhase == Phase.END)
+        {
+            CloseCanvases();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        gamePhase = Phase.WORLD_PAINT;
         galaxyCam.gameObject.SetActive(false);
         worldCam.gameObject.SetActive(true);
-        canvas.gameObject.SetActive(true);
+        SwitchCanvas();
         worldCam.LookAt = UniverseGenerator.Instance.worldList[activeWorldIndex].transform;
         worldCam.Follow = UniverseGenerator.Instance.worldList[activeWorldIndex].transform;
         UniverseGenerator.Instance.worldList[activeWorldIndex].ChangeColorTransforms();
         UniverseGenerator.Instance.worldList[activeWorldIndex].gameObject.layer = 0; // Default layer
-
+        
     }
     public void ChangeToUniverseCam()
     {
         //Galaxy view
         worldCam.gameObject.SetActive(false);
         galaxyCam.gameObject.SetActive(true);
-        canvas.gameObject.SetActive(false);
+        SwitchCanvas();
         galaxyCam.Follow = UniverseGenerator.Instance.GetGalaxy(activeGalaxyIndex).sun;
         galaxyCam.LookAt = UniverseGenerator.Instance.GetGalaxy(activeGalaxyIndex).sun;
     }
@@ -121,4 +142,31 @@ public class GameManager : MonoBehaviour
         UniverseGenerator.Instance.GetWorld(activeWorldIndex).StopSpray();
     }
 
+    public void SwitchCanvas()
+    {
+        if (gamePhase == Phase.NEXT_UNIVERSE_INPUT)
+        {
+            canvas.gameObject.SetActive(false);
+            endScreen.gameObject.SetActive(true);
+        }
+        else if(gamePhase == Phase.SHOW_UNIVERSE)
+        {
+            canvas.gameObject.SetActive(false);
+            endScreen.gameObject.SetActive(false);
+        }
+        else if(gamePhase == Phase.WORLD_PAINT)
+        {
+            canvas.gameObject.SetActive(true);
+            endScreen.gameObject.SetActive(false);
+        }
+    }
+    public void CloseCanvases()
+    {
+        canvas.gameObject.SetActive(false);
+        endScreen.gameObject.SetActive(false);
+    }
+}
+public enum Phase
+{
+    WORLD_PAINT, SHOW_UNIVERSE, NEXT_UNIVERSE_INPUT, END
 }
