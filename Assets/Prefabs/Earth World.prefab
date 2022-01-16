@@ -14653,7 +14653,7 @@ MonoBehaviour:
   _camera: {fileID: 0}
   layers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 65
   key: 323
   guiLayers:
     serializedVersion: 2
@@ -14959,7 +14959,7 @@ MonoBehaviour:
   _camera: {fileID: 0}
   layers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 65
   key: 323
   guiLayers:
     serializedVersion: 2
@@ -15064,7 +15064,7 @@ MonoBehaviour:
   _camera: {fileID: 0}
   layers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 65
   key: 323
   guiLayers:
     serializedVersion: 2
@@ -15169,7 +15169,7 @@ MonoBehaviour:
   _camera: {fileID: 0}
   layers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 65
   key: 323
   guiLayers:
     serializedVersion: 2
