@@ -20,7 +20,7 @@ public class World : MonoBehaviour
         colorTextures = new Dictionary<Colors, Texture2D>();
         colorTransforms = new Dictionary<Colors, Transform>();
         texturesTransform = transform.GetChild(0);
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 6; i++)
         {
             colorTransforms.Add((Colors)i, texturesTransform.transform.GetChild(i));
         }
@@ -31,6 +31,8 @@ public class World : MonoBehaviour
         colorTextures.Add(Colors.RED, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Red_" + index + ".png", typeof(Texture2D)));
         colorTextures.Add(Colors.GREEN, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Green_" + index + ".png", typeof(Texture2D)));
         colorTextures.Add(Colors.PURPLE, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Purple_" + index + ".png", typeof(Texture2D)));
+        colorTextures.Add(Colors.YELLOW, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Yellow_" + index + ".png", typeof(Texture2D)));
+        colorTextures.Add(Colors.ORANGE, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Orange_" + index + ".png", typeof(Texture2D)));
         colorTextures.Add(Colors.GRAY, (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/Resources/TextureOutput/Gray_" + index + ".png", typeof(Texture2D)));
         P3dPaintableTexture p3dTexture = GetComponent<P3dPaintableTexture>();
         p3dTexture.Texture = colorTextures[Colors.GRAY];
@@ -40,7 +42,7 @@ public class World : MonoBehaviour
 
     private void setColorTextures()
     {
-        for(int i = 0; i<4;i++)
+        for(int i = 0; i<6;i++)
         {
             P3dPaintSphere decal = texturesTransform.transform.GetChild(i).GetComponent<P3dPaintSphere>();
             P3dBlendMode blend = decal.BlendMode;
@@ -54,7 +56,7 @@ public class World : MonoBehaviour
     public void ChangeColorTransforms()
     {
         texturesTransform.gameObject.SetActive(true);
-        for (int i =0; i<4;i++)
+        for (int i =0; i<6;i++)
         {
             colorPalette.transform.GetChild(i).GetComponent<P3dButtonIsolate>().Target = colorTransforms[(Colors)i];
         }
@@ -96,6 +98,10 @@ public class World : MonoBehaviour
                         return Colors.PURPLE;
                     case "Green":
                         return Colors.GREEN;
+                    case "Yellow":
+                        return Colors.YELLOW;
+                    case "Orange":
+                        return Colors.ORANGE;
                     default:
                         return Colors.GRAY;
                 }
@@ -106,5 +112,5 @@ public class World : MonoBehaviour
 }
 public enum Colors
 {
-    RED = 0, GREEN = 1 , BLUE = 2, PURPLE = 3 , GRAY = 4, ALPHA = 5
+    RED = 0, GREEN = 1 , BLUE = 2, PURPLE = 3 , YELLOW = 4, ORANGE = 5, GRAY = 6, ALPHA = 7
 }

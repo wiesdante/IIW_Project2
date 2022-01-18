@@ -1541,7 +1541,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: PURPLE
+            m_StringArgument: ORANGE
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &1183198181
@@ -1824,6 +1824,12 @@ MonoBehaviour:
   - color: 3
     active: {fileID: 21300000, guid: be0a21d5cd34a8c46908bc2c8eea2775, type: 3}
     inactive: {fileID: 21300000, guid: 6d2dc09699138a4408f42531bc5beb44, type: 3}
+  - color: 4
+    active: {fileID: 21300000, guid: ffd7860df2b6419429aa01025a8ef8d0, type: 3}
+    inactive: {fileID: 21300000, guid: f7d986fbeaba96a4aa84a75027093bcf, type: 3}
+  - color: 5
+    active: {fileID: 21300000, guid: f879588d89d475841938c37925f5fc3f, type: 3}
+    inactive: {fileID: 21300000, guid: bddfccebba947594b94f9892f6eb4e8e, type: 3}
 --- !u!4 &1303102540
 Transform:
   m_ObjectHideFlags: 0
@@ -4342,7 +4348,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: PURPLE
+            m_StringArgument: YELLOW
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &2124092603

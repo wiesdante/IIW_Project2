@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SprayFX : MonoBehaviour
 {
-    public ParticleSystem red, blue, green, purple;
+    public ParticleSystem red, blue, green, purple, yellow, orange;
 
     public void StartSpray(Colors color)
     {
@@ -28,6 +28,14 @@ public class SprayFX : MonoBehaviour
                 if (!red.isPlaying)
                     red.Play();
                 break;
+            case Colors.YELLOW:
+                if (!yellow.isPlaying)
+                    yellow.Play();
+                break;
+            case Colors.ORANGE:
+                if (!orange.isPlaying)
+                    orange.Play();
+                break;
         }
     }
 
@@ -46,6 +54,12 @@ public class SprayFX : MonoBehaviour
                 break;
             case Colors.RED:
                 red.Stop();
+                break;
+            case Colors.YELLOW:
+                yellow.Stop();
+                break;
+            case Colors.ORANGE:
+                orange.Stop();
                 break;
         }
     }
