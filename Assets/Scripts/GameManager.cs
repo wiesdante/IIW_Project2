@@ -162,6 +162,7 @@ public class GameManager : MonoBehaviour
             endScreen.gameObject.SetActive(false);
         }
     }
+
     public void CloseCanvases()
     {
         canvas.gameObject.SetActive(false);
@@ -188,6 +189,12 @@ public class GameManager : MonoBehaviour
                 break;
             case "PURPLE":
                 palette.transform.GetChild(3).GetComponent<Image>().sprite = sprites[3].active;
+                break;
+            case "YELLOW":
+                palette.transform.GetChild(4).GetComponent<Image>().sprite = sprites[4].active;
+                break;
+            case "ORANGE":
+                palette.transform.GetChild(5).GetComponent<Image>().sprite = sprites[5].active;
                 break;
         }
     }
